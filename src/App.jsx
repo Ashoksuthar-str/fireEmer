@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Moon, Star, Sparkles, Cloud, ChevronRight } from "lucide-react";
+import { Flame, Bell, AlertTriangle, ChevronRight } from "lucide-react";
 
 function App() {
   const [active, setActive] = useState(true);
@@ -9,37 +9,27 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen w-screen  bg-gradient-to-br from-indigo-950 via-purple-900 to-indigo-900 relative overflow-hidden">
-      {/* Animated background stars */}
+    <div className="min-h-screen w-screen bg-gradient-to-br from-red-900 via-orange-800 to-black relative overflow-hidden">
+      {/* Animated background flames */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <Star
-          className="absolute top-20 left-20 text-yellow-200 animate-pulse opacity-60"
-          size={16}
+        <Flame
+          className="absolute top-20 left-20 text-orange-400 animate-pulse opacity-70"
+          size={20}
         />
-        <Star
-          className="absolute top-40 right-32 text-yellow-200 animate-pulse opacity-40"
-          size={12}
+        <Flame
+          className="absolute top-40 right-32 text-red-400 animate-pulse opacity-50"
+          size={14}
           style={{ animationDelay: "0.5s" }}
         />
-        <Star
-          className="absolute bottom-32 left-40 text-yellow-200 animate-pulse opacity-50"
-          size={14}
+        <Flame
+          className="absolute bottom-32 left-40 text-yellow-400 animate-pulse opacity-60"
+          size={18}
           style={{ animationDelay: "1s" }}
         />
-        <Star
-          className="absolute top-60 right-20 text-yellow-200 animate-pulse opacity-70"
-          size={10}
+        <Flame
+          className="absolute top-60 right-20 text-orange-500 animate-pulse opacity-80"
+          size={16}
           style={{ animationDelay: "1.5s" }}
-        />
-        <Cloud
-          className="absolute top-10 right-40 text-indigo-300 opacity-20 animate-pulse"
-          size={80}
-          style={{ animationDelay: "2s" }}
-        />
-        <Cloud
-          className="absolute bottom-20 left-20 text-indigo-300 opacity-15 animate-pulse"
-          size={100}
-          style={{ animationDelay: "0.8s" }}
         />
       </div>
 
@@ -47,52 +37,44 @@ function App() {
         <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 py-12 text-center">
           {/* Icon container with animation */}
           <div className="mb-8 relative">
-            <div className="absolute inset-0 bg-purple-500 blur-3xl opacity-40 animate-pulse"></div>
-            <Moon
-              className="relative text-yellow-100 animate-bounce"
-              size={80}
+            <div className="absolute inset-0 bg-red-500 blur-3xl opacity-40 animate-pulse"></div>
+            <AlertTriangle
+              className="relative text-yellow-300 animate-bounce"
+              size={90}
               strokeWidth={1.5}
             />
           </div>
 
           {/* Main heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-            Help You Get
-            <span className="block bg-gradient-to-r from-purple-300 via-pink-300 to-indigo-300 bg-clip-text text-transparent">
-              Better Sleep
+            What To Do In
+            <span className="block bg-gradient-to-r from-yellow-300 via-red-400 to-orange-500 bg-clip-text text-transparent">
+              Fire Emergency
             </span>
           </h1>
 
           {/* Subheading with icon */}
           <div className="flex items-center justify-center gap-2 mb-8">
-            <Sparkles className="text-yellow-300" size={20} />
-            <p className="text-xl md:text-2xl text-indigo-200 font-light">
-              Your Journey to Restful Nights Starts Here
+            <Bell className="text-yellow-300" size={24} />
+            <p className="text-xl md:text-2xl text-red-200 font-light">
+              Stay Calm. Act Quickly. Get Help.
             </p>
-            <Sparkles className="text-yellow-300" size={20} />
+            <Bell className="text-yellow-300" size={24} />
           </div>
 
-          {/* Description paragraph */}
-          <p className="text-lg text-indigo-100 max-w-2xl mb-4 leading-relaxed">
-            Welcome to your personal sleep sanctuary. We understand that quality
-            sleep is the foundation of a healthy, productive life. Whether
-            you're struggling with insomnia, restless nights, or simply want to
-            optimize your sleep routine, we're here to guide you every step of
-            the way.
-          </p>
-
-          <p className="text-md text-indigo-200 max-w-xl mb-12 leading-relaxed">
-            Our science-backed approach combines relaxation techniques, sleep
-            hygiene education, and personalized recommendations to help you
-            achieve the deep, restorative sleep your body deserves.
+          {/* Description */}
+          <p className="text-lg text-red-100 max-w-2xl mb-4 leading-relaxed">
+            Fire emergencies can happen suddenly. Knowing what to do could save
+            your life and others around you. Always stay alert and follow these
+            steps.
           </p>
 
           {/* CTA Button */}
           <button
             onClick={changeState}
-            className="group relative bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 text-white px-10 py-5 rounded-full text-lg font-semibold shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 flex items-center gap-3"
+            className="group relative bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 text-white px-10 py-5 rounded-full text-lg font-semibold shadow-2xl hover:shadow-red-500/50 transition-all duration-300 hover:scale-105 flex items-center gap-3"
           >
-            <span>Let's Get Better Sleep</span>
+            <span>Press This Button For Help</span>
             <ChevronRight
               className="group-hover:translate-x-1 transition-transform"
               size={24}
@@ -102,54 +84,54 @@ function App() {
           {/* Feature highlights */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl mb-3">🌙</div>
+              <div className="text-4xl mb-3">🚪</div>
               <h3 className="text-white font-semibold text-lg mb-2">
-                Personalized Plans
+                Exit Safely
               </h3>
-              <p className="text-indigo-200 text-sm">
-                Tailored sleep strategies designed just for you
+              <p className="text-red-200 text-sm">
+                Use stairs, never elevators. Get out quickly.
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl mb-3">🧘</div>
+              <div className="text-4xl mb-3">🧯</div>
               <h3 className="text-white font-semibold text-lg mb-2">
-                Relaxation Tools
+                Fire Safety
               </h3>
-              <p className="text-indigo-200 text-sm">
-                Guided meditations and calming techniques
+              <p className="text-red-200 text-sm">
+                If trained, use extinguisher. Otherwise, leave immediately.
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl mb-3">📊</div>
+              <div className="text-4xl mb-3">📞</div>
               <h3 className="text-white font-semibold text-lg mb-2">
-                Track Progress
+                Call Help
               </h3>
-              <p className="text-indigo-200 text-sm">
-                Monitor your sleep improvement journey
+              <p className="text-red-200 text-sm">
+                Dial 101 (India) or 911 (US) for emergency services.
               </p>
             </div>
           </div>
         </div>
       ) : (
         <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 py-12 text-center">
-          {/* Success state */}
+          {/* Emergency instructions */}
           <div className="mb-8 relative">
-            <div className="absolute inset-0 bg-green-500 blur-3xl opacity-40 animate-pulse"></div>
-            <Sparkles
-              className="relative text-green-300 animate-spin"
-              size={80}
+            <div className="absolute inset-0 bg-yellow-500 blur-3xl opacity-40 animate-pulse"></div>
+            <Flame
+              className="relative text-red-400 animate-spin"
+              size={90}
               strokeWidth={1.5}
               style={{ animationDuration: "3s" }}
             />
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-            Hui Ja
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+            Abhi to bas ye boliye
           </h1>
 
           <img
-            src="https://res.cloudinary.com/dtaaxutc2/image/upload/v1759165202/images_lntpay.jpg"
-            alt="Hui ja loda"
+            src="https://res.cloudinary.com/dtaaxutc2/image/upload/v1759166541/Screenshot_2025-09-29_225116_y6kdjq.png"
+            alt="ma ka bhosda aag"
             srcset=""
           />
 
@@ -157,7 +139,7 @@ function App() {
             onClick={changeState}
             className="group bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full text-lg font-semibold border-2 border-white/30 hover:bg-white/30 transition-all duration-300 hover:scale-105"
           >
-            ← Back to Home
+            ← Back to Safety Guide
           </button>
         </div>
       )}
